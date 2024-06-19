@@ -5,7 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.enioka.scanner.api.ScannerLedColor;
@@ -32,7 +32,7 @@ import koamtac.kdc.sdk.KDCErrorListener;
 import koamtac.kdc.sdk.KDCReader;
 import koamtac.kdc.sdk.KDCSymbology;
 
-class KoamtacScanner implements Scanner, Scanner.WithBeepSupport, Scanner.WithLedSupport, KDCBarcodeDataReceivedListener, KDCConnectionListener, KDCErrorListener {
+class KoamtacScanner extends KoamtacPairing implements Scanner, Scanner.WithBeepSupport, Scanner.WithLedSupport, KDCBarcodeDataReceivedListener, KDCConnectionListener, KDCErrorListener {
     private static final String LOG_TAG = "KoamtacScanner";
 
     private KDCReader scanner;
